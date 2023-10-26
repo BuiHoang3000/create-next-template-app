@@ -1,0 +1,120 @@
+.avatar {
+  color: #ffffff;
+}
+
+.custom-chat-tag {
+  margin: 0;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 100px;
+  border: 0;
+}
+
+.custom-image-code-tag {
+  margin: 0;
+  padding: 4px 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 100px;
+  border: 0
+}
+
+.card-hover {
+  display: none;
+}
+
+.card-hover:hover {
+  display: flex;
+}
+
+.card:hover ~ .card-hover {
+  display: flex;
+}
+
+.bg-avatar-1 {
+  background: #69c0ff;
+}
+
+.bg-avatar-2 {
+  background: #ffa39e;
+}
+
+.bg-avatar-3 {
+  background: #ff9c6e;
+}
+
+.bg-avatar-4 {
+  background: #95de64;
+}
+
+.bg-avatar-5 {
+  background: #36cfc9;
+}
+
+.bg-avatar-6 {
+  background: #85a5ff;
+}
+
+.bg-avatar-7 {
+  background: #d3adf7;
+}
+
+.bg-avatar-8 {
+  background: #ff85c0;
+}
+
+.bg-chat-1 {
+  background: #e6d4fe;
+}
+
+.bg-chat-2 {
+  background: #cde1ff;
+}
+
+.bg-chat-3 {
+  background: #fad4d4;
+}
+
+.bg-chat-4 {
+  background: #c4ecf2;
+}
+
+.bg-chat-5 {
+  background: #fcddf2;
+}
+
+.bg-chat-6 {
+  background: #cdeada;
+}
+
+.bg-chat-7 {
+  background: #f9e5b2;
+}
+
+.bg-code-1 {
+  background: #47397d;
+}
+
+.bg-code-2 {
+  background: #254372;
+}
+
+.bg-code-3 {
+  background: #7e4053;
+}
+
+.bg-code-4 {
+  background: #21505a;
+}
+
+.bg-code-5 {
+  background: #632e5e;
+}
+
+.bg-code-6 {
+  background: #39424f;
+}
+
+.bg-code-7 {
+  background: #643c34;
+}
