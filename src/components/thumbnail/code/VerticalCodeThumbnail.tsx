@@ -11,17 +11,18 @@ interface SquareCodeThumbnailProps {
 
 export function VerticalCodeThumbnail(props: SquareCodeThumbnailProps) {
 	const {data} = props;
-	const bgColorsOutlined = 'bg-chat-6';
+	const randomAvatar = data.sharedPromptId % 8;
+	const randomBg = data.sharedPromptId % 7;
 
 	return (
 		<div className='relative'>
 			<div
-				className='card flex flex-col items-start flex-shrink-0 w-[340px] h-[460px] bg-[#47397d] rounded-2xl text-white'>
+				className={`card flex flex-col items-start flex-shrink-0 w-[340px] h-[460px] bg-code-${randomBg} rounded-2xl text-white`}>
 				<div
 					className='flex flex-col items-start px-[25px] pt-[25px] gap-[25px] flex-1 self-stretch max-h-[315px]'>
 					{/*Avatar and Icon*/}
 					<div className='flex justify-between items-center self-stretch'>
-						<Avatar className='avatar'>{data.nickname[0]}</Avatar>
+						<Avatar className={`avatar bg-avatar-${randomAvatar}`}>{data.nickname[0]}</Avatar>
 						<div className='flex items-start gap-2'>
 							<Tag icon={<HeartOutlined/>} color="default" className='custom-image-code-tag'>
 								{data.numberOfLikes}
@@ -57,14 +58,14 @@ export function VerticalCodeThumbnail(props: SquareCodeThumbnailProps) {
 				</div>
 			</div>
 			{/*HOVER*/}
-			<div className='card-hover absolute top-0 w-[340px] h-[460px] bg-[#47397d] rounded-2xl z-10'>
+			<div className={`card-hover absolute top-0 w-[340px] h-[460px] bg-code-${randomBg} rounded-2xl z-10`}>
 				<div
 					className='flex flex-col justify-between flex-shrink-0 w-[340px] h-[460px] bg-black/[.6] rounded-2xl text-white'>
 					<div
 						className='flex flex-col items-start px-[25px] pt-[25px] gap-[25px] flex-1 self-stretch max-h-[315px]'>
 						{/*Avatar and Icon*/}
 						<div className='flex gap-2 items-center self-stretch'>
-							<Avatar className='avatar'>{data.nickname[0]}</Avatar>
+							<Avatar className={`avatar bg-avatar-${randomAvatar}`}>{data.nickname[0]}</Avatar>
 							{data.nickname}
 						</div>
 						{/*Content*/}

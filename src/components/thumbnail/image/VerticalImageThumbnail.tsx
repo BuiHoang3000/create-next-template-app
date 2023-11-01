@@ -12,7 +12,7 @@ interface SquareImageThumbnailProps {
 
 export function VerticalImageThumbnail(props: SquareImageThumbnailProps) {
 	const {data} = props;
-	const bgColorsOutlined = 'bg-chat-6';
+	const randomAvatar = data.sharedPromptId % 8;
 
 	return (
 		<div className='relative'>
@@ -27,7 +27,7 @@ export function VerticalImageThumbnail(props: SquareImageThumbnailProps) {
 						className='flex flex-col items-start px-[25px] pt-[25px] gap-[25px] flex-1 self-stretch max-h-[315px]'>
 						{/*Avatar and Icon*/}
 						<div className='flex justify-between items-center self-stretch'>
-							<Avatar className='avatar'>{data.nickname[0]}</Avatar>
+							<Avatar className={`avatar bg-avatar-${randomAvatar}`}>{data.nickname[0]}</Avatar>
 							<div className='flex items-start gap-2'>
 								<Tag icon={<HeartOutlined/>} color="default" className='custom-image-code-tag'>
 									{data.numberOfLikes}
@@ -69,7 +69,7 @@ export function VerticalImageThumbnail(props: SquareImageThumbnailProps) {
 						<div className='flex flex-col items-start px-[25px] pt-[25px] gap-[25px] flex-1 self-stretch'>
 							{/*Avatar and Icon*/}
 							<div className='flex gap-2 items-center self-stretch'>
-								<Avatar className='avatar'>{data.nickname[0]}</Avatar>
+								<Avatar className={`avatar bg-avatar-${randomAvatar}`}>{data.nickname[0]}</Avatar>
 								{data.nickname}
 							</div>
 							{/*Content*/}
